@@ -1,0 +1,130 @@
+.flag-country {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+  position: relative;
+  background-size: cover;
+}
+.flag-country__ukraine {
+  background-color: yellow;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: blue;
+  }
+}
+
+.flag-country__japan {
+  background-color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: red;
+  }
+}
+
+.flag-country__iceland {
+  position: relative;
+}
+
+.flag-country__iceland--basis {
+  background-color: blue;
+  position: absolute;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 300px;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 200px;
+    width: 50px;
+    left: 33%;
+    transform: translate(-50%, 0%);
+  }
+
+  &::before::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    background-color: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+  }
+}
+
+.flag-country__iceland--cross {
+  top: 0;
+  position: absolute;
+  background-color: transparent;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 30px;
+    width: 300px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 200px;
+    width: 30px;
+    left: 33%;
+    transform: translate(-50%, 0%);
+    z-index: 1;
+  }
+}
+
+.flag-country__czech {
+  background-color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: red;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 130px solid blue;
+    z-index: 1;
+  }
+}
