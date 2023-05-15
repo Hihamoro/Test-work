@@ -203,6 +203,7 @@ img {
 .grid__image:hover {
   border-color: yellow;
   transform: rotate(45deg);
+  transition: border-color 0.5s ease, transform 0.5s ease;
 }
 
 table {
