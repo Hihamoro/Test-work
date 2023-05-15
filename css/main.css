@@ -36,6 +36,8 @@ img {
 }
 
 .flag-country {
+  border: 1px solid black;
+  margin: auto;
   width: 300px;
   height: 200px;
   margin-bottom: 20px;
@@ -206,9 +208,31 @@ img {
   transition: border-color 0.5s ease, transform 0.5s ease;
 }
 
+form {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 table {
   border-collapse: collapse;
   width: 100%;
+}
+@media screen and (max-width: 900px) {
+  table {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  table {
+    font-size: 10px;
+  }
 }
 
 th,
@@ -216,6 +240,12 @@ td {
   text-align: left;
   padding: 8px;
   border: 1px solid #ddd;
+}
+@media screen and (max-width: 900px) {
+  th,
+  td {
+    padding: 4px;
+  }
 }
 
 th {
@@ -231,15 +261,35 @@ input[type=text] {
   border: 2px solid #ccc;
   border-radius: 4px;
 }
+@media screen and (max-width: 900px) {
+  input[type=text] {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (max-width: 500px) {
+  input[type=text] {
+    width: 100%;
+  }
+}
 
 input[type=submit],
 input[type=reset] {
+  margin-left: 20px;
+  width: 80px;
+  height: 40px;
   background-color: #4caf50;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  input[type=submit],
+  input[type=reset] {
+    margin: 8px 0;
+    width: 100%;
+  }
 }
 
 input[type=submit]:hover,
